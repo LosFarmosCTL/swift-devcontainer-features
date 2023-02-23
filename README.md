@@ -1,4 +1,6 @@
-# Swift Dev Container Features:
+[![CI - Test Features](https://github.com/LosFarmosCTL/swift-devcontainer-features/actions/workflows/test.yaml/badge.svg)](https://github.com/LosFarmosCTL/swift-devcontainer-features/actions/workflows/test.yaml)
+
+# Swift Dev Container Features
 
 This repository contains two Features - [`apple-swift-format`](src/swift-format) and [`swiftlint`](src/swiftlint). These install [apple/swift-format](https://github.com/apple/swift-format) and [realm/SwiftLint](https://github.com/realm/SwiftLint) respectively inside of a devcontainer.
 
