@@ -1,0 +1,29 @@
+{
+  "id": "apple-swift-format",
+  "version": "1.0.0",
+  "name": "swift-format",
+  "documentationURL": "https://github.com/losfarmosctl/swift-devcontainer-features/tree/main/src/apple-swift-format",
+  "description": "Installs Apple's own formatter for swift code, swift-format, built from source.",
+  "keywords": ["swift", "format", "formatter", "swift-format", "apple"],
+  "options": {
+    "version": {
+      "type": "string",
+      "proposals": [
+        "latest",
+        "0.50700.1",
+        "0.50600.1",
+        "0.50500.0",
+        "0.50400.0",
+        "0.50300.0",
+        "0.50200.1",
+        "main"
+      ],
+      "default": "latest",
+      "description": "The version of swift-format to install (depends on the installed Swift version, main should only be used for pre-release Swift snapshots)."
+    }
+  },
+  "installsAfter": [
+    "ghcr.io/devcontainers/features/git",
+    "ghcr.io/devcontainers/features/common-utils"
+  ]
+}

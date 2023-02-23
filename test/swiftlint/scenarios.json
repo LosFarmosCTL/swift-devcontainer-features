@@ -1,0 +1,21 @@
+{
+  "swiftlint_latest": {
+    "image": "swift:latest",
+    "features": {
+      "ghcr.io/devcontainers/features/common-utils:2": {
+        "installZsh": "false",
+        "username": "vscode",
+        "userUid": "1000",
+        "userGid": "1000",
+        "upgradePackages": "false"
+      },
+      "ghcr.io/devcontainers/features/git:1": {
+        "version": "os-provided",
+        "ppa": "false"
+      },
+      "swiftlint": {
+        "version": "latest"
+      }
+    }
+  }
+}
