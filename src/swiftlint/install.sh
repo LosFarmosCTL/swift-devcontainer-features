@@ -29,13 +29,13 @@ if [ "$ARCH" = "x86_64" ]; then
     unzip swiftlint.zip
     mv ./swiftlint /usr/local/bin/swiftlint
 
-    echo "SwiftLint downloaded, cleaning up..."
+    echo "SwiftLint installed, cleaning up..."
     cd ..
     rm -rf swiftlint
 else
     echo "Architecture is $ARCH, building from source..."
 
-    echo "Cloning realm/SwiftLint on version $VERSION..."
+    echo "Cloning realm/SwiftLint on $VERSION..."
 
     git clone https://github.com/realm/swiftlint
     cd swiftlint

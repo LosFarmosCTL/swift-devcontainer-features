@@ -27,7 +27,7 @@ echo "Building swift-format..."
 swift build -c release
 mv .build/release/swift-format /usr/local/bin/swift-format
 
-echo "Cleaning up..."
+echo "swift-format installed, cleaning up..."
 cd ..
 rm -rf swift-format
 
