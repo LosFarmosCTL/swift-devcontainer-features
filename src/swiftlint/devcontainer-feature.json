@@ -4,7 +4,6 @@
   "name": "SwiftLint",
   "documentationURL": "https://github.com/losfarmosctl/swift-devcontainer-features/tree/main/src/swiftlint",
   "description": "Installs realm/SwiftLint, a widely used tool for checking Swift code style violations.",
-  "keywords": ["swift", "format", "lint", "swiftlint", "apple"],
   "options": {
     "version": {
       "type": "string",
