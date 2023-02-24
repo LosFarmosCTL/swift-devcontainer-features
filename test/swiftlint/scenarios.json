@@ -18,6 +18,25 @@
       }
     }
   },
+  "swiftlint_0_50_3": {
+    "image": "swift:latest",
+    "features": {
+      "ghcr.io/devcontainers/features/common-utils:2": {
+        "installZsh": "false",
+        "username": "vscode",
+        "userUid": "1000",
+        "userGid": "1000",
+        "upgradePackages": "false"
+      },
+      "ghcr.io/devcontainers/features/git:1": {
+        "version": "os-provided",
+        "ppa": "false"
+      },
+      "swiftlint": {
+        "version": "0.50.3"
+      }
+    }
+  },
   "swiftlint_from_source": {
     "image": "swift:latest",
     "features": {
