@@ -20,6 +20,11 @@
       ],
       "default": "latest",
       "description": "The version of SwiftLint to install."
+    },
+    "fromSource": {
+      "type": "boolean",
+      "default": false,
+      "description": "Always install SwiftLint from source instead of using a pre-built binary, even if one is available."
     }
   },
   "installsAfter": [

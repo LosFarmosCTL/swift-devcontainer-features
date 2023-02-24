@@ -17,7 +17,7 @@ fi
 ARCH=$(uname -m)
 
 # Binary releases are only available for x86_64
-if [ "$ARCH" = "x86_64" ]; then
+if [ "$ARCH" = "x86_64" ] && [ "$FROMSOURCE" = false ]; then
     echo "Architecture is x86_64, downloading SwiftLint binary release $VERSION..."
 
     ARTIFACT_URL="https://github.com/realm/swiftlint/releases/download/$VERSION/swiftlint_linux.zip"
