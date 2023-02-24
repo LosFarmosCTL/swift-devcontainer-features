@@ -14,10 +14,10 @@ if [ "$VERSION" = "latest" ]; then
     VERSION=$LATEST_VERSION
 fi
 
-ARCHITECTURE=$(dpkg --print-architecture)
+ARCH=$(uname -m)
 
 # Binary releases are only available for x86_64
-if [ "$ARCHITECTURE" = "x86_64" ]; then
+if [ "$ARCH" = "x86_64" ]; then
     echo "Architecture is x86_64, downloading SwiftLint binary release $VERSION..."
 
     if ! type curl >/dev/null 2>&1; then
@@ -38,7 +38,7 @@ if [ "$ARCHITECTURE" = "x86_64" ]; then
     cd ..
     rm -rf swiftlint
 else
-    echo "Architecture is $ARCHITECTURE, building from source..."
+    echo "Architecture is $ARCH, building from source..."
 
     if ! type swift >/dev/null 2>&1; then
         echo "No swift executable found."
