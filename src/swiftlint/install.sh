@@ -37,7 +37,7 @@ else
 
     echo "Cloning realm/SwiftLint on $VERSION..."
 
-    git clone https://github.com/realm/swiftlint
+    git clone https://github.com/realm/swiftlint.git
     cd swiftlint
 
     git checkout "tags/$VERSION"
