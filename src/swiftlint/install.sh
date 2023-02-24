@@ -20,11 +20,6 @@ ARCH=$(uname -m)
 if [ "$ARCH" = "x86_64" ]; then
     echo "Architecture is x86_64, downloading SwiftLint binary release $VERSION..."
 
-    if ! type curl >/dev/null 2>&1; then
-        echo "No curl executable found."
-        exit 1
-    fi
-
     ARTIFACT_URL="https://github.com/realm/swiftlint/releases/download/$VERSION/swiftlint_linux.zip"
 
     mkdir swiftlint
@@ -39,14 +34,6 @@ if [ "$ARCH" = "x86_64" ]; then
     rm -rf swiftlint
 else
     echo "Architecture is $ARCH, building from source..."
-
-    if ! type swift >/dev/null 2>&1; then
-        echo "No swift executable found."
-        exit 1
-    elif ! type git >/dev/null 2>&1; then
-        echo "No git executable found."
-        exit 1
-    fi
 
     echo "Cloning realm/SwiftLint on version $VERSION..."
 

@@ -14,11 +14,6 @@ if [ "$VERSION" = "latest" ]; then
     VERSION=$LATEST_VERSION
 fi
 
-if ! type swift >/dev/null 2>&1; then
-    echo "No swift executable found."
-    exit 1
-fi
-
 echo "Cloning swift-format on $VERSION..."
 
 git clone https://github.com/apple/swift-format.git
