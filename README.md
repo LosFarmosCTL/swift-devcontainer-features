@@ -2,7 +2,7 @@
 
 # Swift Dev Container Features
 
-This repository contains two Features - [`apple-swift-format`](src/swift-format) and [`swiftlint`](src/swiftlint). These install [apple/swift-format](https://github.com/apple/swift-format) and [realm/SwiftLint](https://github.com/realm/SwiftLint) respectively inside of a devcontainer.
+This repository contains two Features - [`apple-swift-format`](src/apple-swift-format) and [`swiftlint`](src/swiftlint). These install [apple/swift-format](https://github.com/apple/swift-format) and [realm/SwiftLint](https://github.com/realm/SwiftLint) respectively inside of a devcontainer.
 
 ## Requirements
 
