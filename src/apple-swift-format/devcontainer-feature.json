@@ -9,6 +9,9 @@
       "type": "string",
       "proposals": [
         "latest",
+        "510.1.0",
+        "509.0.0",
+        "508.0.1",
         "0.50700.1",
         "0.50600.1",
         "0.50500.0",
@@ -18,7 +21,7 @@
         "main"
       ],
       "default": "latest",
-      "description": "The version of swift-format to install (depends on the installed Swift version, main should only be used for pre-release Swift snapshots)."
+      "description": "The version of swift-format to install (for Swift <5.7 this must match the installed Swift version, refer to the swift-format docs for more information)"
     }
   },
   "installsAfter": [
