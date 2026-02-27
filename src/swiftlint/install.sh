@@ -16,40 +16,28 @@ fi
 
 ARCH=$(uname -m)
 
-# Binary releases are only available for x86_64
-if [ "$ARCH" = "x86_64" ] && [ "$FROMSOURCE" = false ]; then
+if [ "$ARCH" = "x86_64" ]; then
     echo "Architecture is x86_64, downloading SwiftLint binary release $VERSION..."
 
-    ARTIFACT_URL="https://github.com/realm/swiftlint/releases/download/$VERSION/swiftlint_linux.zip"
+    ARTIFACT_URL="https://github.com/realm/swiftlint/releases/download/$VERSION/swiftlint_linux_amd64.zip"
+elif [ "$ARCH" = "aarch64" ]; then
+    echo "Architecture is aarch64, downloading SwiftLint binary release $VERSION..."
 
-    mkdir swiftlint
-    cd swiftlint
-
-    curl -o swiftlint.zip -L $ARTIFACT_URL
-    unzip swiftlint.zip
-    mv ./swiftlint /usr/local/bin/swiftlint
-
-    echo "SwiftLint installed, cleaning up..."
-    cd ..
-    rm -rf swiftlint
+    ARTIFACT_URL="https://github.com/realm/swiftlint/releases/download/$VERSION/swiftlint_linux_arm64.zip"
 else
-    echo "Architecture is $ARCH, building from source..."
-
-    echo "Cloning realm/SwiftLint on $VERSION..."
-
-    git clone https://github.com/realm/swiftlint.git
-    cd swiftlint
-
-    git checkout "tags/$VERSION"
-
-    echo "Building SwiftLint..."
-    swift package update
-    swift build -c release -Xswiftc -static-stdlib -Xlinker -lCFURLSessionInterface -Xlinker -lCFXMLInterface -Xlinker -lcurl -Xlinker -lxml2 -Xswiftc -I. -Xlinker -fuse-ld=lld -Xlinker -L/usr/lib/swift/linux --product swiftlint
-    mv .build/release/swiftlint /usr/local/bin/swiftlint
-
-    echo "SwiftLint installed, cleaning up..."
-    cd ..
-    rm -rf swift-format
+    echo "Architecture $ARCH is not supported, please use x86_64 or aarch64."
+    exit 1
 fi
+
+mkdir swiftlint
+cd swiftlint
+
+curl -o swiftlint.zip -L $ARTIFACT_URL
+unzip swiftlint.zip
+mv ./swiftlint /usr/local/bin/swiftlint
+
+echo "SwiftLint installed, cleaning up..."
+cd ..
+rm -rf swiftlint
 
 echo "Done!"

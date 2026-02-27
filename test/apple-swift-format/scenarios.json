@@ -5,8 +5,6 @@
       "ghcr.io/devcontainers/features/common-utils:2": {
         "installZsh": "false",
         "username": "vscode",
-        "userUid": "1000",
-        "userGid": "1000",
         "upgradePackages": "false"
       },
       "ghcr.io/devcontainers/features/git:1": {
@@ -16,14 +14,29 @@
       "apple-swift-format": {}
     }
   },
+  "swift-format_6.2": {
+    "image": "swift:6.2",
+    "features": {
+      "ghcr.io/devcontainers/features/common-utils:2": {
+        "installZsh": "false",
+        "username": "vscode",
+        "upgradePackages": "false"
+      },
+      "ghcr.io/devcontainers/features/git:1": {
+        "version": "os-provided",
+        "ppa": "false"
+      },
+      "apple-swift-format": {
+        "version": "latest"
+      }
+    }
+  },
   "swift-format_5.7": {
     "image": "swift:5.7",
     "features": {
       "ghcr.io/devcontainers/features/common-utils:2": {
         "installZsh": "false",
         "username": "vscode",
-        "userUid": "1000",
-        "userGid": "1000",
         "upgradePackages": "false"
       },
       "ghcr.io/devcontainers/features/git:1": {
