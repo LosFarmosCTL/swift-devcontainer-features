@@ -1,6 +1,6 @@
 {
   "id": "swiftlint",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "name": "SwiftLint",
   "documentationURL": "https://github.com/losfarmosctl/swift-devcontainer-features/tree/main/src/swiftlint",
   "description": "Installs realm/SwiftLint, a widely used tool for checking Swift code style violations.",

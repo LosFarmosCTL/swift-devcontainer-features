@@ -1,6 +1,6 @@
 {
   "id": "apple-swift-format",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "name": "swift-format",
   "documentationURL": "https://github.com/losfarmosctl/swift-devcontainer-features/tree/main/src/apple-swift-format",
   "description": "Installs Apple's own formatter for swift code, swift-format, built from source.",
