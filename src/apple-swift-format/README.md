@@ -15,7 +15,7 @@ Installs Apple's own formatter for swift code, swift-format, built from source.
 
 | Options Id | Description | Type | Default Value |
 |-----|-----|-----|-----|
-| version | The version of swift-format to install (depends on the installed Swift version, main should only be used for pre-release Swift snapshots). | string | latest |
+| version | The version of swift-format to install (for Swift <5.7 this must match the installed Swift version, refer to the swift-format docs for more information) | string | latest |
 
 ## Requirements
 
