@@ -25,7 +25,8 @@ fi
 
 echo "Building swift-format..."
 swift build -c release
-mv .build/release/swift-format /usr/local/bin/swift-format
+BIN_PATH=$(swift build -c release --show-bin-path)
+mv "$BIN_PATH/swift-format" /usr/local/bin/swift-format
 
 echo "swift-format installed, cleaning up..."
 cd ..

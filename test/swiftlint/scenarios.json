@@ -1,6 +1,6 @@
 {
   "swiftlint_latest": {
-    "image": "swift:latest",
+    "image": "swift:6.4-noble",
     "features": {
       "ghcr.io/devcontainers/features/common-utils:2": {
         "installZsh": "false",
@@ -17,7 +17,7 @@
     }
   },
   "swiftlint_0_60_0": {
-    "image": "swift:latest",
+    "image": "swift:6.4-noble",
     "features": {
       "ghcr.io/devcontainers/features/common-utils:2": {
         "installZsh": "false",
